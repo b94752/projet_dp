@@ -19,10 +19,4 @@ Collection<Concert> concerts = new ArrayList<Concert>();
 		
 	}
 	
-	@Override
-	public String toString() {
-		return "Lieu [concerts=" + concerts + "]";
-	}
-
-
 }

@@ -1,36 +1,71 @@
 package projet_concert;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
 public class Concert {
 	
-Lieu lieu;
-Collection<Client> clients = new ArrayList<Client>();
-Collection<Groupe> groupes = new ArrayList<Groupe>();
-	
+Lieu lieu = new Lieu();
+ReserverConcert reserver = new ReserverConcert();
+JouerConcert jouer = new JouerConcert();
+
+	//LIEU : 
 	public Lieu getLieu() {
 		return lieu;
 	}
 	
 	public void setLieu(Lieu lieu) {
 		this.lieu = lieu;
-	}
-
-	public void addClient(Client client) {
-		clients.add(client);
-		
+	}	
+	
+	
+	//RESERVER_CLIENT :
+	public ReserverConcert getReserverConcert() {
+		return reserver;
 	}
 	
-	@Override
-	public String toString() {
-		return "Client [clients=" + clients + "]";
+	public void setReserverConcert(ReserverConcert reserver) {
+		this.reserver = reserver;
+	}
+	
+	public void addClient(Client client) {
+		reserver.addConcert(this);
+		reserver.addClient(client);
+	}
+	
+	public String toStringConcertToReserver() {
+		return reserver.toStringConcertToClient();
+	}
+	
+	public String toStringConcert() {
+		return  "Concert [clients=" + reserver.clients + "]";
+	}
+	
+	//JOUER_GROUPE : 
+	public JouerConcert getJouer() {
+		return jouer;
+	}
+	
+	public void setJouerConcert(JouerConcert jouer) {
+		this.jouer = jouer;
 	}
 	
 	public void addGroupe(Groupe groupe) {
-		groupes.add(groupe);
-		
+		jouer.addConcert(this);
+		jouer.addGroupe(groupe);
 	}
 	
+	public String toStringConcertToJouer() {
+		return jouer.toStringConcertToGroupe();
+	}
+	
+	public String toStringGroupe() {
+		return  "Concert [groupes=" + jouer.groupes + "]";
+	}
+
+
+
+
+	
+
+	
+
 
 }

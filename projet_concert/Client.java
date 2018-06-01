@@ -1,33 +1,28 @@
 package projet_concert;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
 public class Client {
 	
-Collection<Concert> concerts = new ArrayList<Concert>();
+ReserverConcert reserver = new ReserverConcert();
 
-	
-	public Collection<Concert> getConcerts(){
-		return concerts;
-
+	//RESERVER_CLIENT :
+	public ReserverConcert getReserverConcert() {
+		return reserver;
 	}
 	
+	public void setReserverConcert(ReserverConcert reserver) {
+		this.reserver = reserver;
+	}
 	
 	public void addConcert(Concert concert) {
-		concerts.add(concert);
-		concert.addClient(this);
-		
+		reserver.addClient(this);
+		reserver.addConcert(concert);
 	}
-
 	
-	//public Collection<Client> selectAll(){
-		//String requete = "SELECT * FROM clients;";
-	//}
-	
-	@Override
-	public String toString() {
-		return "Client [concerts=" + concerts + "]";
+	public String toStringClientToReserver() {
+		return reserver.toStringClientToConcert();
 	}
-
+	
+	public String toStringClient() {
+		return  "Client [concerts=" + reserver.concerts + "]";
+	}
 }

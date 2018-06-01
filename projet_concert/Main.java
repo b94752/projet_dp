@@ -4,26 +4,21 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		
+		//DECLARATIONS : 
 		Lieu Bercy = new Lieu();
-		
-		Concert Star80 = new Concert();
-		Bercy.addConcert(Star80);
-		
-		Concert SoireeRock = new Concert();
-		Bercy.addConcert(SoireeRock);
-		
-		System.out.println(Bercy);
-				
+		Concert RnB = new Concert();
+		Groupe Rihanna = new Groupe();
 		Client Emma = new Client();
-		Star80.addClient(Emma);
-		
 		Client Adrien = new Client();
-		Star80.addClient(Adrien);
 		
-		System.out.println(Star80);
-		System.out.println(SoireeRock);
+		//LIENS : 
+		Bercy.addConcert(RnB);
+		Rihanna.addConcert(RnB);
+		Emma.addConcert(RnB);
+		Adrien.addConcert(RnB);
+		
+		System.out.println(RnB.toStringConcertToJouer());
+		System.out.println(Bercy);
 		
 	}
-
 }
