@@ -5,7 +5,12 @@ import java.util.Collection;
 
 public class Lieu {
 	
-Collection<Concert> concerts = new ArrayList<Concert>();
+	String libelleLieu;
+	String adresse;
+	String codePostal;
+	String ville;
+	
+	Collection<Concert> concerts = new ArrayList<Concert>();
 	
 	public Collection<Concert> getConcerts(){
 		return concerts;

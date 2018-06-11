@@ -1,4 +1,4 @@
-package test_admin;
+package projet_concert.test_admin;
 
 public class Main {
 
@@ -6,15 +6,15 @@ public class Main {
 		
 		try {
 		// erreur a corriger
-			Concert_admin subject = new ConcreteAdmin(); 
-			Concert_admin subject2 = new ConcreteAdmin(); 
+			Concert_admin admin1 = new ConcreteAdmin(); 
+			Concert_admin admin2 = new ConcreteAdmin(); 
 
 			
-			Concert observer1 = new ConcreteConcert();
-			observer1.ajouter(subject);
+			Concert concert1 = new ConcreteConcert();
+			admin1.ajouter(concert1);
 			
 			Concert observer2 = new ConcreteConcert();
-			subject.supprimer(subject);
+			admin2.modifier(concert1);
 			
 			//String s = "Bonjour";
 			//subject2.notify(s);

@@ -2,9 +2,12 @@ package projet_concert;
 
 public class Concert {
 	
-Lieu lieu = new Lieu();
-ReserverConcert reserver = new ReserverConcert();
-JouerConcert jouer = new JouerConcert();
+	String nomConcert;
+	
+	
+	Lieu lieu = new Lieu();
+	ReserverConcert reserver = new ReserverConcert();
+	JouerConcert jouer = new JouerConcert();
 
 	//LIEU : 
 	public Lieu getLieu() {
@@ -29,10 +32,7 @@ JouerConcert jouer = new JouerConcert();
 		reserver.addConcert(this);
 		reserver.addClient(client);
 	}
-	
-	public String toStringConcertToReserver() {
-		return reserver.toStringConcertToClient();
-	}
+
 	
 	public String toStringConcert() {
 		return  "Concert [clients=" + reserver.clients + "]";
@@ -52,9 +52,7 @@ JouerConcert jouer = new JouerConcert();
 		jouer.addGroupe(groupe);
 	}
 	
-	public String toStringConcertToJouer() {
-		return jouer.toStringConcertToGroupe();
-	}
+
 	
 	public String toStringGroupe() {
 		return  "Concert [groupes=" + jouer.groupes + "]";

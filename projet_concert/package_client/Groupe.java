@@ -1,6 +1,13 @@
 package projet_concert;
 
+import java.sql.Date;
+
 public class Groupe {
+	
+	String nomGroupe;
+	String genre;
+	Date dateCreation;
+	String description;
 
 JouerConcert jouer = new JouerConcert();
 
@@ -18,10 +25,6 @@ JouerConcert jouer = new JouerConcert();
 		jouer.addConcert(concert);
 	}
 
-	
-	public String toStringGroupeToJouer() {
-		return jouer.toStringGroupeToConcert();
-	}
 	
 	public String toStringConcert() {
 		return  "Groupe [concerts=" + jouer.concerts + "]";

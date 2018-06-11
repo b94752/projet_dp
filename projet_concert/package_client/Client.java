@@ -1,6 +1,15 @@
 package projet_concert;
 
+import java.sql.Date;
+
+@Entity
 public class Client {
+	
+	String nom;
+	String prenom;
+	Date ddn;
+	float solde;
+	
 	
 ReserverConcert reserver = new ReserverConcert();
 
@@ -18,9 +27,6 @@ ReserverConcert reserver = new ReserverConcert();
 		reserver.addConcert(concert);
 	}
 	
-	public String toStringClientToReserver() {
-		return reserver.toStringClientToConcert();
-	}
 	
 	public String toStringClient() {
 		return  "Client [concerts=" + reserver.concerts + "]";

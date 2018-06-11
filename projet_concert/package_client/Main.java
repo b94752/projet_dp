@@ -17,8 +17,8 @@ public class Main {
 		Emma.addConcert(RnB);
 		Adrien.addConcert(RnB);
 		
-		System.out.println(RnB.toStringConcertToJouer());
-		System.out.println(Bercy);
+		System.out.println(Rihanna);
+		System.out.println(Emma);
 		
 	}
 }
