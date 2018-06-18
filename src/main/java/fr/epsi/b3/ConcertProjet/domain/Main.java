@@ -1,8 +1,10 @@
-package projet_concert;
+package fr.epsi.b3.ConcertProjet.domain;
 
 public class Main {
 
 	public static void main(String[] args) {
+		
+		try {
 
 		//DECLARATIONS : 
 		Lieu Bercy = new Lieu();
@@ -19,6 +21,10 @@ public class Main {
 		
 		System.out.println(Rihanna);
 		System.out.println(Emma);
+		
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 		
 	}
 }

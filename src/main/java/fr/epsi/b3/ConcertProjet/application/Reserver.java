@@ -1,6 +1,9 @@
-package projet_concert;
+package fr.epsi.b3.ConcertProjet.application;
 
 import java.util.Collection;
+
+import fr.epsi.b3.ConcertProjet.domain.Client;
+import fr.epsi.b3.ConcertProjet.domain.Concert;
 
 public interface Reserver {
 	
