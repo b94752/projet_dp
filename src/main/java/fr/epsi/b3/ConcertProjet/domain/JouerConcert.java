@@ -4,11 +4,8 @@ package fr.epsi.b3.ConcertProjet.domain;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
-<<<<<<< HEAD
-@Entity
-=======
+
 	@Entity
->>>>>>> 1906 2.0 with interface
 	public class JouerConcert {
 	@ManyToOne	
 	Concert concert;
