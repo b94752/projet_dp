@@ -2,11 +2,14 @@ package fr.epsi.b3.ConcertProjet.domain;
 
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 
-	@Entity
-	public class JouerConcert {
+@Entity
+public class JouerConcert {
+	@Id
+	int Id_JouerConcert;
 	@ManyToOne	
 	Concert concert;
 	@ManyToOne

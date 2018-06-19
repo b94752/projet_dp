@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Bean;
 
 import fr.epsi.b3.ConcertProjet.domain.Client;
 import fr.epsi.b3.ConcertProjet.domain.ClientRepository;
+import fr.epsi.b3.ConcertProjet.domain.Reservation;
 
 @SpringBootApplication
 public class ConcertProjetApplication {
@@ -30,7 +31,16 @@ private static final Logger log = LoggerFactory.getLogger(ConcertProjetApplicati
 		return (args) -> {
 			
 			Client client = new Client();
+			
+			Reservation reservation = new Reservation();
+			client.getConcerts().add(reservation);
+			reservation.setClient(client);
+			
 			clientrepo.save(client);
+			for(Client c:clientrepo.findAll() )
+			{
+			System.out.println(c);
+			}
 			/*
 			Conduire c = new ConduireTaxi(voitureRepository, passagerRepository);
 			c.addPassager("tintin");

@@ -24,6 +24,7 @@ public class InscriptionClient implements Inscription
 
 	@Override
 	public void Inscription() {
+		// pas de scanner ici a mettre dans le main de java
 		Scanner sc = new Scanner(System.in);
 		Client client = new Client();
 		
@@ -33,7 +34,7 @@ public class InscriptionClient implements Inscription
 		System.out.println("votre prenom");
 		client.setPrenom(sc.nextLine());
 		
-		System.out.println("votre année de naissance");
+		System.out.println("votre annee de naissance");
 		String annee = sc.nextLine();
 		System.out.println("votre mois de naissance");
 		String mois = sc.nextLine();

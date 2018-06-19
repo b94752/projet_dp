@@ -4,6 +4,7 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,7 +20,7 @@ public class Client {
 	String prenom;
 	Date ddn;
 	float solde = 0;
-	@OneToMany 
+	@OneToMany(cascade=CascadeType.ALL) 
 	Collection<Reservation> Concerts = new ArrayList<Reservation>();
 
 	public long getId() {
@@ -71,6 +72,11 @@ public class Client {
 		reserverConcert.setConcert(concert);
 	}
 	
+	@Override
+	public String toString() {
+		return "Client [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", ddn=" + ddn + ", solde=" + solde
+				+ ", Concerts=" + Concerts + "]";
+	}
 	public void removeConcert(Concert concert) {
 		
 	}
