@@ -20,9 +20,9 @@ public class Client {
 	Date ddn;
 	float solde;
 	@OneToMany 
-	Collection<ReserverConcert> Concerts = new ArrayList<ReserverConcert>();
+	Collection<Reservation> Concerts = new ArrayList<Reservation>();
 	
-	
+	//CLIENT
 	public long getId() {
 		return id;
 	}
@@ -53,22 +53,28 @@ public class Client {
 	public void setSolde(float solde) {
 		this.solde = solde;
 	}
-	public Collection<ReserverConcert> getConcerts() {
+	
+	//CONCERTS : 
+	public Collection<Reservation> getConcerts() {
 		return Concerts;
 	}
-	public void setConcerts(Collection<ReserverConcert> concerts) {
+	public void setConcerts(Collection<Reservation> concerts) {
 		Concerts = concerts;
 	}
 	
 	public void addConcert(Concert concert) {
 		
-		ReserverConcert reserverConcert = new ReserverConcert();
+		Reservation reserverConcert = new Reservation();
 		
 		Concerts.add(reserverConcert);
 		reserverConcert.setClient(this);
 	
 		concert.clientConcert.add(reserverConcert);
 		reserverConcert.setConcert(concert);
+	}
+	
+	public void removeConcert(Concert concert) {
+		
 	}
 	
 }

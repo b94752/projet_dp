@@ -18,6 +18,61 @@ public class Lieu {
 	String codePostal;
 	String ville;
 	
+	public long getId() {
+		return id;
+	}
+
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+
+	public String getLibelleLieu() {
+		return libelleLieu;
+	}
+
+
+	public void setLibelleLieu(String libelleLieu) {
+		this.libelleLieu = libelleLieu;
+	}
+
+
+	public String getAdresse() {
+		return adresse;
+	}
+
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
+
+
+	public String getCodePostal() {
+		return codePostal;
+	}
+
+
+	public void setCodePostal(String codePostal) {
+		this.codePostal = codePostal;
+	}
+
+
+	public String getVille() {
+		return ville;
+	}
+
+
+	public void setVille(String ville) {
+		this.ville = ville;
+	}
+
+
+	public void setConcerts(Collection<Concert> concerts) {
+		this.concerts = concerts;
+	}
+
+	//CONCERTS : 
 	@OneToMany
 	Collection<Concert> concerts = new ArrayList<Concert>();
 	
@@ -30,6 +85,10 @@ public class Lieu {
 	public void addConcert(Concert concert) {
 		concerts.add(concert);
 		concert.setLieu(this);
+		
+	}
+	
+	public void removeConcert(Concert concert) {
 		
 	}
 	

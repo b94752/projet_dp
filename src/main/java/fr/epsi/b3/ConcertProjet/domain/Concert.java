@@ -17,16 +17,16 @@ public class Concert {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	long id;
 	String nomConcert;
-	@OneToMany Collection<ReserverConcert> clientConcert = new ArrayList<ReserverConcert>();
+	@OneToMany Collection<Reservation> clientConcert = new ArrayList<Reservation>();
 	@OneToMany Collection<JouerConcert> groupesConcert = new ArrayList<JouerConcert>();
 	@ManyToOne Lieu lieu;
 	
-
-	public Collection<ReserverConcert> getClientConcert() {
+	//RESERVER : 
+	public Collection<Reservation> getClientConcert() {
 		return clientConcert;
 	}
 
-	public void setClientConcert(Collection<ReserverConcert> clientConcert) {
+	public void setClientConcert(Collection<Reservation> clientConcert) {
 		this.clientConcert = clientConcert;
 	}
 
@@ -39,7 +39,7 @@ public class Concert {
 		this.lieu = lieu;
 	}	
 	
-	
+	//CONCERT : 
 	public long getId() {
 		return id;
 	}
@@ -58,7 +58,7 @@ public class Concert {
 
 
 
-
+	//JOUER : 
 	public Collection<JouerConcert> getGroupesConcert() {
 		return groupesConcert;
 	}
@@ -67,6 +67,7 @@ public class Concert {
 		this.groupesConcert = groupesConcert;
 	}
 
+	//ADD - REMOVE : 
 	public void addConcert(Groupe groupe) {
 		
 		JouerConcert jouerConcert = new JouerConcert();
@@ -78,15 +79,23 @@ public class Concert {
 		jouerConcert.setGroupe(groupe);
 	}
 	
+	public void removeConcert(Groupe groupe) {
+		
+	}
+	
 	public void addConcert(Client client) {
 		
-		ReserverConcert reserverConcert = new ReserverConcert();
+		Reservation reserverConcert = new Reservation();
 		
 		clientConcert.add(reserverConcert);
 		reserverConcert.setConcert(this);
 	
 		client.Concerts.add(reserverConcert);
 		reserverConcert.setClient(client);
+	}
+	
+	public void removeConcert(Client client) {
+		
 	}
 
 

@@ -1,11 +1,10 @@
 package fr.epsi.b3.ConcertProjet.domain;
 
-import java.util.ArrayList;
-import java.util.Collection;
 
+import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
-
+@Entity
 	public class JouerConcert {
 	@ManyToOne	
 	Concert concert;

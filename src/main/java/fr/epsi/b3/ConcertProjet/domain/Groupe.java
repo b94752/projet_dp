@@ -24,25 +24,63 @@ public class Groupe{
 	@OneToMany 
 	Collection<JouerConcert> jouer_s = new ArrayList<JouerConcert>();
 
-
-	
-	public void addConcert(Concert concert) {
-		
-		JouerConcert jouerConcert = new JouerConcert();
-		
-		jouer_s.add(jouerConcert);
-		jouerConcert.setGroupe(this);
-	
-		concert.groupesConcert.add(jouerConcert);
-		jouerConcert.setConcert(concert);
+	public long getId() {
+		return id;
 	}
-	
-	
 
 
-	public void removeConcert(Concert concert) {
-		// TODO Auto-generated method stub
-		
+	public void setId(long id) {
+		this.id = id;
+	}
+
+
+	public String getNomGroupe() {
+		return nomGroupe;
+	}
+
+
+	public void setNomGroupe(String nomGroupe) {
+		this.nomGroupe = nomGroupe;
+	}
+
+
+	public String getGenre() {
+		return genre;
+	}
+
+
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+
+
+	public Date getDateCreation() {
+		return dateCreation;
+	}
+
+
+	public void setDateCreation(Date dateCreation) {
+		this.dateCreation = dateCreation;
+	}
+
+
+	public String getDescription() {
+		return description;
+	}
+
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+
+	public Collection<JouerConcert> getJouer_s() {
+		return jouer_s;
+	}
+
+
+	public void setJouer_s(Collection<JouerConcert> jouer_s) {
+		this.jouer_s = jouer_s;
 	}
 
 
@@ -56,11 +94,23 @@ public class Groupe{
 		// TODO Auto-generated method stub
 		
 	}
-
-	public Collection<Groupe> findByIdJouer(int Id_jouer) {
-		// TODO Auto-generated method stub
-		return null;
+	
+	public void addConcert(Concert concert) {
+		
+		JouerConcert jouerConcert = new JouerConcert();
+		
+		jouer_s.add(jouerConcert);
+		jouerConcert.setGroupe(this);
+	
+		concert.groupesConcert.add(jouerConcert);
+		jouerConcert.setConcert(concert);
 	}
+	
+	public void removeConcert(Concert concert) {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 
 }

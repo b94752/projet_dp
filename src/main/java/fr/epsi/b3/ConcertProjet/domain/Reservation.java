@@ -3,7 +3,7 @@ package fr.epsi.b3.ConcertProjet.domain;
 
 import javax.persistence.ManyToOne;
 
-public class ReserverConcert{
+public class Reservation{
 	
 @ManyToOne 
 Concert concert;
