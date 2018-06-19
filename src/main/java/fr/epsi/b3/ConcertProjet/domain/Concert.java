@@ -21,7 +21,11 @@ public class Concert {
 	@OneToMany Collection<JouerConcert> groupesConcert = new ArrayList<JouerConcert>();
 	@ManyToOne Lieu lieu;
 	
+<<<<<<< HEAD
 	//RESERVER : 
+=======
+
+>>>>>>> 1906 2.0 with interface
 	public Collection<Reservation> getClientConcert() {
 		return clientConcert;
 	}

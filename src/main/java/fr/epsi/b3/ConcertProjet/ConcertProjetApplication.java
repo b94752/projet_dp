@@ -1,20 +1,24 @@
-package fr.epsi.b3.ConcertProjet;
-
+package fr.epsi.b3.ConcertProjet; 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import fr.epsi.b3.ConcertProjet.domain.Client;
 import fr.epsi.b3.ConcertProjet.domain.ClientRepository;
 
 @SpringBootApplication
 public class ConcertProjetApplication {
 
+	@Autowired
+	ClientRepository clientrepo;
+	
 private static final Logger log = LoggerFactory.getLogger(ConcertProjetApplication.class);
 	
 	public static void main(String[] args) {
@@ -24,6 +28,9 @@ private static final Logger log = LoggerFactory.getLogger(ConcertProjetApplicati
 	@Bean
 	public CommandLineRunner demo1(ClientRepository repository) {
 		return (args) -> {
+			
+			Client client = new Client();
+			clientrepo.save(client);
 			/*
 			Conduire c = new ConduireTaxi(voitureRepository, passagerRepository);
 			c.addPassager("tintin");

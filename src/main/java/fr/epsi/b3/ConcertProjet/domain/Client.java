@@ -18,9 +18,13 @@ public class Client {
 	String nom;
 	String prenom;
 	Date ddn;
-	float solde;
+	float solde = 0;
 	@OneToMany 
 	Collection<Reservation> Concerts = new ArrayList<Reservation>();
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 1906 2.0 with interface
 	
 	//CLIENT
 	public long getId() {
@@ -44,8 +48,8 @@ public class Client {
 	public Date getDdn() {
 		return ddn;
 	}
-	public void setDdn(Date ddn) {
-		this.ddn = ddn;
+	public void setDdn(Date datedenaissance) {
+		this.ddn = datedenaissance;
 	}
 	public float getSolde() {
 		return solde;
@@ -53,8 +57,11 @@ public class Client {
 	public void setSolde(float solde) {
 		this.solde = solde;
 	}
+<<<<<<< HEAD
 	
 	//CONCERTS : 
+=======
+>>>>>>> 1906 2.0 with interface
 	public Collection<Reservation> getConcerts() {
 		return Concerts;
 	}
