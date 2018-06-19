@@ -21,12 +21,7 @@ public class Client {
 	float solde = 0;
 	@OneToMany 
 	Collection<Reservation> Concerts = new ArrayList<Reservation>();
-<<<<<<< HEAD
-=======
-	
->>>>>>> 1906 2.0 with interface
-	
-	//CLIENT
+
 	public long getId() {
 		return id;
 	}
@@ -57,11 +52,7 @@ public class Client {
 	public void setSolde(float solde) {
 		this.solde = solde;
 	}
-<<<<<<< HEAD
-	
-	//CONCERTS : 
-=======
->>>>>>> 1906 2.0 with interface
+
 	public Collection<Reservation> getConcerts() {
 		return Concerts;
 	}
