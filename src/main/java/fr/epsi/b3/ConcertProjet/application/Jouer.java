@@ -19,7 +19,4 @@ public interface Jouer {
 	public Collection<Groupe> findByIdJouer (int Id_jouer);
 	
 
-	
-	
-
 }

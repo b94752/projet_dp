@@ -20,7 +20,7 @@ public class Main {
 		Adrien.addConcert(RnB);
 		
 		System.out.println(Rihanna);
-		System.out.println(Emma);
+		//System.out.println(Emma);
 		
 		} catch(Exception e) {
 			e.printStackTrace();

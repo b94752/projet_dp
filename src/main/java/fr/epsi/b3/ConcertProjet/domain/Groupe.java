@@ -101,7 +101,6 @@ public class Groupe{
 		
 		jouer_s.add(jouerConcert);
 		jouerConcert.setGroupe(this);
-	
 		concert.groupesConcert.add(jouerConcert);
 		jouerConcert.setConcert(concert);
 	}

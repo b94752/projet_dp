@@ -10,8 +10,10 @@ import javax.persistence.ManyToOne;
 public class JouerConcert {
 	@Id
 	int Id_JouerConcert;
+	
 	@ManyToOne	
 	Concert concert;
+	
 	@ManyToOne
 	Groupe groupe;
 	

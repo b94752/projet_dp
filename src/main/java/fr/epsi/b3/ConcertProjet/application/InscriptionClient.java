@@ -44,6 +44,7 @@ public class InscriptionClient implements Inscription
 		Integer.parseInt(mois);
 		Integer.parseInt(jour);
 		
+		
 	    String target = jour+mois+annee;
 	    DateFormat df = new SimpleDateFormat("dd MMM yyyy");
 	    Date result;
